@@ -3,10 +3,12 @@ package hello;
 public class Hello {
     private Integer id;
     private String name;
+    private Integer number;
 
-    public Hello(Integer id, String name) {
+    public Hello(Integer id, String name, Integer number) {
         this.id = id;
         this.name = name;
+        this.number = number;
     }
 
     public Hello() {
@@ -28,11 +30,20 @@ public class Hello {
         this.name = name;
     }
 
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
+
     @Override
     public String toString() {
         return "Hello{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", number=" + number +
                 '}';
     }
 }
